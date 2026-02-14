@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesa com Pão e Café</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f5deb3, #deb887);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #8b4513;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #a0522d;
+}
+
+.mesa-container {
+    display: none;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mesa {
+    width: 300px;
+    height: 150px;
+    background-color: #654321;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pao {
+    width: 80px;
+    height: 50px;
+    background-color: #f4a460;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 50px;
+}
+
+.cafe {
+    width: 50px;
+    height: 60px;
+    background-color: #3e2723;
+    border-radius: 10px;
+    position: absolute;
+    top: -30px;
+    right: 60px;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="mostrarMesa()">Clique para ir até a mesa 🍞☕</button>
+
+<div class="mesa-container" id="mesaContainer">
+    <div class="mesa">
+        <div class="pao"></div>
+        <div class="cafe"></div>
+    </div>
+    <h2>Você chegou na mesa!</h2>
+</div>
+
+<script>
+function mostrarMesa() {
+    document.getElementById("mesaContainer").style.display = "block";
+}
+</script>
+
+</body>
+</html>
